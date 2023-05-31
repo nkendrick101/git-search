@@ -23,13 +23,17 @@ repositories..." />
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
       {!isLoading && !error && (
-        <ul>
-          {searchResults.map((repository: Repository) => (
-            <li key={repository.id}>
-              <RepositoryCard repository={repository} />
-            </li>
-          ))}
-        </ul>
+       
+       <div className="grid grid-cols-5 gap-3">
+        {searchResults.map((repository: Repository) => (
+  <div className="" key={repository.id}>
+    <RepositoryCard repository={repository} />
+  </div>
+  
+        ))}
+</div>
+
+ 
       )}
     </div>
   );
