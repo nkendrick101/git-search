@@ -69,7 +69,44 @@ function RepositoryPage() {
         </li>
        
       </ul>
+      <>{ /* component */ }
+<section className="bg-white p-5 m-5 rounded">
+      <h3 className="text-2xl mb-5">
+       {repository.owner}
+        
+      </h3>
 
+      
+          
+      
+
+      <div className="flex flex-col lg:flex-row gap-5 mt-8">
+        <div className="w-full lg:w-1/5">
+          <div className="p-2 rounded text-center bg-teal-500 text-white">
+           Stars
+          </div>
+          <div className="border border-gray-300 rounded text-center py-8 mt-2">
+            <h2 className="text-4xl font-bold pb-2"></h2>
+            <h4 className="inline text-gray-500 text-sm">
+              {repository.stars}
+            </h4>
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-5 mt-8">
+        <div className="w-full lg:w-1/5">
+          <div className="p-2 rounded text-center bg-teal-500 text-white">
+            Forks
+          </div>
+          <div className="border border-gray-300 rounded text-center py-8 mt-2">
+            <h2 className="text-4xl font-bold pb-2"></h2>
+            <h4 className="inline text-gray-500 text-sm">{repository.forks}</h4>
+          </div>
+        </div>
+       
+      
+        </div>
+      </div>
+    </section></>
     </div>
   );
 }
